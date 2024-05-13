@@ -48,7 +48,7 @@ class TalkToMeCommand extends Command
         if ($io->confirm('Do you want a mix recommendation?')) {
             $mixes = $this->mixRepository->findAll();
             $mix = $mixes[array_rand($mixes)];
-            $io->note('I recommend the mix: ' . $mix['title']);
+            $io->note('I recommend the mix: ' . $mixes['title']);
         }
 
         return Command::SUCCESS;
