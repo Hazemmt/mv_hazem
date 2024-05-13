@@ -6,12 +6,11 @@
 parameters:
 
 services:
+    # default configuration for services in *this* file
     _defaults:
         autowire: true
         autoconfigure: true
-        public: false
 
-    # explicitly configure the service
     App\Controller\VinylController:
         arguments:
             $isDebug: '%kernel.debug%'
